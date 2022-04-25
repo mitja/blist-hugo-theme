@@ -48,6 +48,8 @@ git submodule add https://github.com/divinerites/plausible-hugo.git themes/plaus
 
 ## Preview the theme with example content
 
+**Note**: The example site does not feature the plausible support.
+
 Blist theme ships with an fully configured example site. For a quick preview:
 
 Copy the `package.json` file from `themes/showcase` folder to your hugo website root folder, and run `npm install`.
