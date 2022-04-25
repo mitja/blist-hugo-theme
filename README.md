@@ -155,6 +155,7 @@ Configure the plausible plug in in `config.toml`:
   enable = true
   domain = "example.com"
   proxy_netlify = false
+```
 
 
 See the [plausible-hugo README](https://github.com/divinerites/plausible-hugo#readme) for more details about configuration.
