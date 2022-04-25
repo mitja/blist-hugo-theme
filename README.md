@@ -4,7 +4,7 @@
 ![Blist hugo theme](https://img.shields.io/github/license/apvarun/blist-hugo-theme)
 ![Hugo generator](https://img.shields.io/badge/generator-hugo-brightgreen)
 
-Blist is a clean and fast blog theme for your Hugo site.
+Blist is a clean and fast blog theme for your Hugo site. This is a fork with added support for [Plausible](https://plausible.io/) website analytics.
 
 ![Blist Icon](https://github.com/apvarun/blist-hugo-theme/raw/main/images/blist-logo.png)
 
@@ -20,6 +20,7 @@ Blist is a clean and fast blog theme for your Hugo site.
 - Fast performance
 - SEO optimized
 - i18n support
+- Plausible analytics integration
 
 ## Preview
 
@@ -34,13 +35,15 @@ Minimum Hugo Version: **0.82.1**
 Run from the root of your Hugo site:
 
 ```sh
-git clone https://github.com/apvarun/blist-hugo-theme.git themes/blist
+git clone https://github.com/mitja/blist-hugo-theme.git themes/blist
+git clone https://github.com/divinerites/plausible-hugo.git themes/plausible-hugo
 ```
 
 Alternatively, you can include this repository as a [git submodule](https://git-scm.com/docs/gitsubmodules). This makes it easier to update this theme if you have your Hugo site in git as well:
 
 ```sh
-git submodule add https://github.com/apvarun/blist-hugo-theme.git themes/blist
+git submodule add https://github.com/mitja/blist-hugo-theme.git themes/blist
+git submodule add https://github.com/divinerites/plausible-hugo.git themes/plausible-hugo
 ```
 
 ## Preview the theme with example content
@@ -134,6 +137,23 @@ Enable Mathematical options: set `math: true` in your markdown frontmatter
 ### Google Analytics
 
 Set `googleAnalytics` in `config.toml` to activate Hugo's [internal Google Analytics template](https://gohugo.io/templates/internal/#google-analytics).
+
+### Plausible Analytics
+
+Add `plausible-hugo` to your themes in `config.toml`:
+
+```
+theme = ["blist", "plausible-hugo"]
+```
+
+Configure the plausible plug in in `config.toml`:
+
+[params.plausible]
+  enable = true
+  domain = "example.com"
+  proxy_netlify = false
+
+See the [plausible-hugo README](https://github.com/divinerites/plausible-hugo#readme) for more details about configuration.
 
 ## Performance
 
