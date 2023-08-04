@@ -4,7 +4,7 @@
 ![Blist hugo theme](https://img.shields.io/github/license/apvarun/blist-hugo-theme)
 ![Hugo generator](https://img.shields.io/badge/generator-hugo-brightgreen)
 
-Blist is a clean and fast blog theme for your Hugo site. This is a fork with added support for [Plausible](https://plausible.io/) website analytics.
+Blist is a clean and fast blog theme for your Hugo site. This is a fork with added support for [Plausible](https://plausible.io/) website analytics and a footer menu.
 
 ![Blist Icon](https://github.com/apvarun/blist-hugo-theme/raw/main/images/blist-logo.png)
 
@@ -22,6 +22,7 @@ Blist is a clean and fast blog theme for your Hugo site. This is a fork with add
 - SEO optimized
 - i18n support
 - Plausible analytics integration
+- Footer menu
 - Support comments systems
   - Disqus (hugo native)
   - giscus
@@ -106,6 +107,15 @@ From `exampleSite/`, copy `config.toml` to the root folder of your Hugo site and
 ### Menu
 
 Menu in Blist theme is pre-set to have all section names. You can include custom links in header using the `menu.main` option config.toml.
+
+The footer menu can be filled with `Menus.footer`. Here is an example for a multilingual site:
+
+```toml
+[[languages.en.menu.footer]]
+    name = "About"
+    url = "page/about/"
+    weight = 1
+```
 
 ### Logo
 
